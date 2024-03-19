@@ -1,0 +1,124 @@
+/* Global attributes */
+:root{
+  --primary-color-red:#E61E2A;
+  --primary-color-blue: #000054;
+  --secondary-color-yellow: #FAC800;
+  --secondary-color-grey:#E3E5E0; 
+}
+
+*{
+  font-family: "Fira Sans", sans-serif;
+}
+body{
+
+}
+a, li{
+  text-decoration: none;
+  list-style: none; 
+}
+/* Navigation bar */
+header{
+  background-color: var(--primary-color-blue);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 80px;
+}
+.mobile-nav-icon{
+  display: none;
+}
+nav ul{
+  display: flex; 
+  margin: auto; 
+}
+nav li{
+  font-size: 18px; 
+  margin-right: 50px;
+}
+nav a{
+  color: white; 
+}
+/* Main content */
+main{
+  display: flex; 
+  flex-direction: column;
+}
+h1{
+  text-align: center;
+}
+.container{
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.product{
+  width: calc(20% - 10px);
+  padding: 10px 15px; 
+  display: flex; 
+  flex-direction: column;
+}
+/* Adding responsiveness design */
+/* navigation bar */
+  @media only screen and (max-width: 769px){
+  header{
+  background-color: revert;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  min-height: 80px;
+}
+.logo{
+  display: none;
+}
+.mobile-nav-icon{
+  background-color: var(--primary-color-blue);
+  display: block;
+  color: white;
+  margin-left: 0;
+}
+
+nav ul{
+  display: flex; 
+  background-color: #000054;
+  flex-direction: column;
+  margin: auto; 
+  min-width: 500px;
+}
+nav{
+  display: none;
+}
+
+nav li{
+  padding: 5px;
+  font-size: 18px; 
+  margin-right: 50px;
+}
+nav a{
+  color: rgb(255, 255, 255); 
+}
+.mobile-nav-icon:hover + nav{
+    display: block !important;
+}
+nav:hover {
+      display: block !important;
+  }
+/* for the content layout */
+/* 1 layout */
+/* .product{
+  width: calc(70% - 10px);
+  margin: 0 auto;
+  padding: 10px 15px; 
+  display: flex; 
+  flex-direction: column;
+} */
+/* 2 layout */
+.product{
+  width: calc(40% - 10px);
+  margin: 0 auto;
+  padding: 10px 15px; 
+  display: flex; 
+  flex-direction: column;
+}
+}
+  /* option 2 using what the teacher is using */
